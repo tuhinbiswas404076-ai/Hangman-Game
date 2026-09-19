@@ -1,0 +1,42 @@
+{
+  "model_type": "HistGradientBoostingClassifier",
+  "framework": "scikit-learn",
+  "model_file": "model.pkl",
+  "stats_file": "stats.pkl",
+  "corpus_file": "wordnet_corpus.csv",
+  "feature_names": [
+    "global_freq",
+    "length_freq",
+    "position_freq_avg",
+    "position_freq_max",
+    "pair_freq_with_revealed",
+    "pair_freq_with_wrong",
+    "progress",
+    "blank_ratio",
+    "guessed_ratio",
+    "norm_word_length"
+  ],
+  "num_features": 10,
+  "vocabulary": {
+    "source": "nltk.corpus.wordnet",
+    "total_words": 41402,
+    "min_word_length": 4,
+    "max_word_length": 15
+  },
+  "game_rules": {
+    "max_incorrect_guesses": 6,
+    "allowed_characters": "abcdefghijklmnopqrstuvwxyz"
+  },
+  "training": {
+    "training_samples": 1350452,
+    "simulated_states_per_word": 3,
+    "candidates_per_state": 6,
+    "random_seed": 42
+  },
+  "evaluation": {
+    "ml_top1_hit_rate": 0.564,
+    "ml_top3_hit_rate": 0.859,
+    "baseline_top1_hit_rate": 0.502,
+    "win_rate_autonomous": 0.227
+  }
+}
