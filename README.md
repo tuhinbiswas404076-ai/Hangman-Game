@@ -21,11 +21,9 @@ Unlike standard Hangman bots that rely on static letter-frequency tables (e.g. `
 
 ## 🚀 Live Demo
 
-Play the game here:
+Play the game live here:
 
-[Hugging Face Space](YOUR_HUGGING_FACE_SPACE_URL)
-
-*(Replace `YOUR_HUGGING_FACE_SPACE_URL` with your published Hugging Face Space URL once deployed.)*
+👉 **[Launch WordNet AI Hangman on Hugging Face Spaces](https://huggingface.co/spaces/tuhinbiswas404076-ai/Hangman-Game)**
 
 ---
 
@@ -62,7 +60,7 @@ This project implements a complete end-to-end Machine Learning pipeline:
 
 The interactive web interface is hosted on Hugging Face Spaces:
 
-> 👉 **[Play the Live Hangman AI Game](YOUR_HUGGING_FACE_SPACE_URL)**
+> 👉 **[Play the Live Hangman AI Game](https://huggingface.co/spaces/tuhinbiswas404076-ai/Hangman-Game)**
 
 ---
 

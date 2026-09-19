@@ -249,7 +249,7 @@ def run_tests():
         assert "app_file: app.py" in readme, "Missing app_file in README.md"
         assert "# WordNet AI Hangman" in readme, "Missing title in README.md"
         assert "## 🚀 Live Demo" in readme, "Missing Live Demo section in README.md"
-        assert "YOUR_HUGGING_FACE_SPACE_URL" in readme, "Missing placeholder in README.md"
+        assert "https://huggingface.co/spaces/" in readme, "Missing Hugging Face Space URL in README.md"
         for section in ["Project Overview", "Features", "How the AI Works", "WordNet Corpus",
                         "ML Model Architecture", "Training", "Game Workflow", "Installation",
                         "Running Locally", "Hugging Face Deployment", "Project Structure",
