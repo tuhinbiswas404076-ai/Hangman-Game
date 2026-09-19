@@ -289,8 +289,3 @@ The machine learning model substantially outperforms static frequency order beca
 * [ ] Audio sound effects for correct/incorrect guesses and win/loss states.
 
 ---
-
-## 16. Author
-
-Developed as an open-source educational Machine Learning project combining Natural Language Processing (NLP) with game theory.
-Contributions and feedback are welcome via GitHub Pull Requests!
