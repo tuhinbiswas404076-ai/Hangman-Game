@@ -24,12 +24,18 @@ import gradio as gr
 ALPHABET = list(string.ascii_lowercase)
 MAX_WRONG = 6
 
+# Base directory of the application script
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Search paths for model artifacts (checks model/ first, then artifacts/)
 def find_file(relative_options):
     for path in relative_options:
+        full_path = os.path.join(BASE_DIR, path)
+        if os.path.exists(full_path):
+            return full_path
         if os.path.exists(path):
             return path
-    return relative_options[0]
+    return os.path.join(BASE_DIR, relative_options[0])
 
 MODEL_PATH = find_file(["model/model.pkl", "artifacts/model.pkl"])
 STATS_PATH = find_file(["model/stats.pkl", "artifacts/stats.pkl"])
@@ -580,6 +586,7 @@ body, .gradio-container {
 """
 
 with gr.Blocks(title="🎮 WordNet AI Hangman") as demo:
+    gr.HTML(f"<style>{CUSTOM_CSS}</style>")
     gr.HTML(
         """
         <div class="title-header">
@@ -739,4 +746,4 @@ with gr.Blocks(title="🎮 WordNet AI Hangman") as demo:
 # App Launch Entry Point
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    demo.launch(css=CUSTOM_CSS)
+    demo.launch()
